@@ -1,0 +1,56 @@
+<div class = "main-container">
+    <img class = "bgimage" src = "../../assets/images/backgroud/backgrounddp.jpg" />
+    <div class = "sub-container">
+      <h1 id = "employee-text" class = "common-text">Employee Details</h1>
+      <p id = "inner-description" class = "common-text">Please login with your email adress. It will show your data inside the home page...!!!</p>
+    </div>
+
+    <div class = "login-main-container">
+      <h3 id = "heading-login" class = "common-text">Log In to Employee Details</h3>
+
+      <hr/>
+
+      <div class = "image-container">
+        <img class = "profile-image" (click)="getImage()" src = "../../assets/images/profile/male.png"/>
+      </div>
+
+      <div class = "whole-input-container">
+        <form>
+            <mat-form-field class="example-full-width" floatLabel="auto" hideRequiredMarker appearance = "outline" color = "primary">
+                <mat-label class = "mat-label">Email address</mat-label>
+                <input matInput placeholder = "Email" type = "text" class = "mat-input" required />
+                <mat-hint class = "mat-hint" align = "end">Max 100 characters</mat-hint>
+                <mat-error>Please enter a password</mat-error>
+            </mat-form-field>
+
+            <br/>
+
+            <mat-form-field class="example-full-width" floatLabel="auto" hideRequiredMarker appearance = "outline">
+              <mat-label class = "mat-label">Password</mat-label>
+              <input matInput placeholder = "Password" type = "password" class = "mat-input" required/>
+              <mat-hint class = "mat-hint" align = "end">Max 100 characters</mat-hint>
+              <mat-error>Please enter a password</mat-error>
+           </mat-form-field>
+        </form>
+
+         <div class = "button-row">
+            <button mat-raised-button class="mat-btn" (click)="loginBtn()">Log In</button>
+         </div>
+
+         <div class = "forgot-password-div">
+           <mat-checkbox class = "remember-me-checkbox">Remember Me</mat-checkbox>
+           <a mat-button [routerLink] = "['/emp-forgotpassword']" class = "forgot-password-text">Forgot Password ?</a>
+         </div>
+
+         <div class = "social-media-container">
+           <img src= "../../assets/images/social/google.png" width="30px" height="30px" class = "google" (click)="googleSignIn()"/>
+           <img src= "../../assets/images/social/facebook.png" width="30px" height="30px" class = "facebook" (click)="facebookSignIn()"/>
+           <img src= "../../assets/images/social/twitter.png" width="32px" height="32px" class = "twitter" (click)="twitterSignIn()"/>
+         </div>
+
+         <div class = "login-footer-container">
+           <p style="color: white;">Already Login ? <a [routerLink] = "['/emp-signup']" class = "create-account">Create account</a></p>
+         </div>
+      </div>
+    </div>
+</div>
